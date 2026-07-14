@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Portfolio.css';
+import { createRoot } from 'react-dom/client';
+import './protafolio.css';
 
 const projectsData = [
   {
@@ -70,7 +71,7 @@ const projectsData = [
   }
 ];
 
-export default function Portfolio() {
+function Portfolio() {
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredProjects = activeTab === 'all'
@@ -143,3 +144,7 @@ export default function Portfolio() {
     </div>
   );
 }
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<Portfolio />);
