@@ -1,0 +1,185 @@
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --color-shopify: #10b981;
+  --color-shopify-light: #ecfdf5;
+  --color-square: #0f172a;
+  --color-square-light: #f1f5f9;
+  --color-accent: #2563eb;
+  --border-color: #e2e8f0;
+}
+
+.portfolio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.portfolio-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  color: var(--text-main);
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(37, 99, 215, 0.2);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card-top {
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.badge-shopify {
+  background-color: var(--color-shopify-light);
+  color: var(--color-shopify);
+}
+
+.badge-squarespace {
+  background-color: var(--color-square-light);
+  color: var(--color-square);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.credentials {
+  background-color: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-left: 4px solid #d97706;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #92400e;
+  margin-bottom: 16px;
+}
+
+.credentials code {
+  font-family: monospace;
+  background: #fef3c7;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.card-bottom {
+  margin-top: auto;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 11px;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  color: var(--color-accent);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background-color: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.portfolio-footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .portfolio-container { padding: 20px 10px; }
+  .portfolio-header h1 { font-size: 2rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
